@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    
+<meta charset="utf-8" >
+
+<title> 【教程】使用RenpyViewer在IOS/IPAD OS设备上游玩由Ren&#39;py引擎制作的游戏 | 肥狗子</title>
+<meta name="description" content="我的个人博客">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.0/animate.min.css">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://parrthu.github.io//favicon.ico?v=1655266408014">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://parrthu.github.io//styles/main.css">
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="//cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.5.1/build/highlight.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div id="app" class="main">
+      <div class="site-header-container">
+  <div class="site-header">
+    <div class="left">
+      <a href="https://parrthu.github.io/">
+        <img class="avatar" src="https://parrthu.github.io//images/avatar.png?v=1655266408014" alt="" width="32px" height="32px">
+      </a>
+      <a href="https://parrthu.github.io/">
+        <h1 class="site-title">肥狗子</h1>
+      </a>
+    </div>
+    <div class="right">
+      <transition name="fade">
+        <i class="icon" :class="{ 'icon-close-outline': menuVisible, 'icon-menu-outline': !menuVisible }" @click="menuVisible = !menuVisible"></i>
+      </transition>
+    </div>
+  </div>
+</div>
+
+<transition name="fade">
+  <div class="menu-container" style="display: none;" v-show="menuVisible">
+    <div class="menu-list">
+      
+        
+          <a href="/" class="menu purple-link">
+            首页
+          </a>
+        
+      
+        
+          <a href="/archives" class="menu purple-link">
+            归档
+          </a>
+        
+      
+        
+          <a href="/tags" class="menu purple-link">
+            标签
+          </a>
+        
+      
+        
+          <a href="/post/about" class="menu purple-link">
+            关于
+          </a>
+        
+      
+    </div>
+  </div>
+</transition>
+
+
+      <div class="content-container">
+        <div class="post-detail">
+          
+            <div class="feature-container" style="background-image: url('https://parrthu.github.io//post-images/jiao-cheng-shi-yong-renpyviewer-zai-iosipad-os-she-bei-shang-you-wan-you-renpy-yin-qing-zhi-zuo-de-you-xi.png')">
+            </div>
+          
+          <h2 class="post-title"> 【教程】使用RenpyViewer在IOS/IPAD OS设备上游玩由Ren&#39;py引擎制作的游戏</h2>
+          <div class="post-info post-detail-info">
+            <span><i class="icon-calendar-outline"></i> 2022-05-23</span>
+            
+              <span>
+                <i class="icon-pricetags-outline"></i>
+                
+                  <a href="https://parrthu.github.io/tag/pY6iJBhlO/">
+                    技术类
+                    
+                  </a>
+                
+              </span>
+            
+          </div>
+          <div class="post-content" v-pre>
+            <h1 id="引入">引入</h1>
+<p>由于Apple对于应用程序的分发做出了严格限制，尽管Renpy引擎支持使用Xcode导出ipa包，但是现在IOS设备上仍然很难玩到renpy开发的游戏。<br>
+今天为大家介绍的Renpyviewer可以<em><strong>较好地</strong></em>解决这个问题。<br>
+首先我们直接在App Store中搜索Renpyviewer，购买安装即可。<br>
+<img src="https://parrthu.github.io//post-images/1653314396434.png" alt="" loading="lazy"><br>
+这个国区标价四十元的就是我们要用的工具。<s>如果你嫌贵，也可以去万能的某宝购买，一般3块钱可以买到。</s><br>
+<strong>但是请千万注意，原作者开发不易，有条件应该尽量支持。而且后续更新也更有保障。</strong></p>
+<h1 id="具体用法">具体用法</h1>
+<h2 id="如果你使用的是pc">如果你使用的是PC</h2>
+<p>下载并且解压好你需要玩的视觉小说（<em>以Password为例</em>）<br>
+一个完整的renpy游戏数据应该包含game，renpy，lib文件夹和游戏主程序。<br>
+<img src="https://parrthu.github.io//post-images/1653314476226.png" alt="" loading="lazy"><br>
+然后通过数据线连接你的设备和电脑，使用ITunes将包含以上所有内容的文件夹通过“文件共享”拖入renpyviewer<br>
+<img src="https://parrthu.github.io//post-images/1653314483019.png" alt="" loading="lazy"><br>
+进度条走完后，在你的设备上打开renpyviewer，可以看到我们导入的视觉小说已经出现了<br>
+<img src="https://parrthu.github.io//post-images/1653314489061.png" alt="" loading="lazy"><br>
+点按后稍微等待即可游玩。</p>
+<h2 id="如果你使用的是移动设备以ipad为例">如果你使用的是移动设备（以IPad为例）</h2>
+<p>下载好你要玩的视觉小说（<em>以The Smoke Room为例</em>）<br>
+从itch上下载后应该是zip的压缩包格式，在“文件”app找到你下载的压缩包<br>
+<img src="https://parrthu.github.io//post-images/1653314587178.png" alt="" loading="lazy"><br>
+将其解压缩<br>
+<img src="https://parrthu.github.io//post-images/1653314591869.png" alt="" loading="lazy"><br>
+并把解压缩的文件放入renpyviewer文件夹<br>
+<img src="https://parrthu.github.io//post-images/1653314600549.png" alt="" loading="lazy"><br>
+再打开renpyviewer即可游玩。</p>
+<h2 id="一些已知问题">一些已知问题</h2>
+<ol>
+<li>在某些情况下，可能会在启动时闪退。遇到了这种情况的话，闪退的这个视觉小说就不能运行。</li>
+<li>启动时间较长，取决于视觉小说的大小。一般来说越大越需要时间启动。</li>
+<li>执行动画效果时会掉帧，这个也不是特别普遍，但是像AfterClass和APTCH这种确实掉帧比较多。</li>
+<li>无法执行鼠标右键的操作。</li>
+<li>当按钮过小时难以按到，并且对游戏内有点按操作的场景的支持较差。也就是说如果游戏需要你点场景的话，可能你点了一两次他才会反应。</li>
+<li>游戏需要输入文字时，键盘会把游戏卡出屏幕外。具体表现为在屏幕底部出现一个巨大的键盘，然后游戏就被顶上去，卡到屏幕外面了。</li>
+</ol>
+<p>如果你在使用的时候，还有任何问题请发送反馈至作者的邮箱：&gt; zgcarzypeter@gmail.com<br>
+<strong>我不是开发者，我不能协助你解决问题！</strong></p>
+<p>以上，希望各位在ipad或者iPhone上冲得开心！</p>
+
+          </div>
+        </div>
+
+        
+          <div class="next-post">
+            <a class="purple-link" href="https://parrthu.github.io/post/hello-my-blog/">
+              <h3 class="post-title">
+                下一篇：Hello My Blog
+              </h3>
+            </a>
+          </div>
+          
+      </div>
+
+      
+
+      <div class="site-footer">
+  <div class="slogan">我的个人博客</div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+  由<a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>构建 | <a class="rss" href="https://parrthu.github.io//atom.xml" target="_blank">RSS</a>
+</div>
+
+
+    </div>
+    <script type="application/javascript">
+
+hljs.initHighlightingOnLoad()
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+  </body>
+</html>
